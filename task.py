@@ -19,7 +19,7 @@ class Environment:
             self.plane.adjust()
             turb = gauss(0, 4)
             self.plane.orientation += turb
-            if -180 < self.plane.orientation < 180:
+            if -90 < self.plane.orientation < 90:
                 yield self.plane.orientation, turb
                 continue
             break
@@ -35,7 +35,7 @@ class Plane:
 
     # defining the constructor
     def __init__(self):
-        self.orientation = gauss(0, 13.4164)  # orientation of the plane is between -180 and 180
+        self.orientation = gauss(0, 9.4868329)  # orientation of the plane is between -90 and 90
 
     # the pilot is trying to adjust the airplane
     def adjust(self):
